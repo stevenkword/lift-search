@@ -11,9 +11,11 @@ module.exports = (grunt) ->
         config: "config.rb"
         force: true,
       development:
-        environment: "development"
+        options:
+          environment: "development"
       production:
-        environment: "production"
+        options:
+          environment: "production"
     jshint:
       options:
         "curly": true
@@ -70,7 +72,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-jshint'
   grunt.loadNpmTasks 'grunt-contrib-imagemin'
 
-  # By default, lint and run all tests.
   grunt.registerTask 'default', [
     'build:staging'
   ]

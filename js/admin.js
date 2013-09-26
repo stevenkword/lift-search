@@ -178,8 +178,9 @@
   liftAdmin.templateLoader = {
     templates: {},
     getTemplate: function(name) {
-      if( !this.templates[name] && $('script#' + name + '-template').is('*') )
+      if( !this.templates[name] && $('script#' + name + '-template').is('*') ){
         this.templates[name] = $('script#' + name + '-template').html();
+      }
       return this.templates[name] || false;
     }
   };
@@ -568,8 +569,7 @@
       this.ajaxLoader('Authenticating with Amazon');
     },
     updateCredentials: function() {
-      var _this = this,
-          credentials = {
+      var credentials = {
         accessKey: $('#accessKey').val(),
         secretKey: $('#secretKey').val()
       };
@@ -694,7 +694,9 @@
       return this;
     },
     submitOnEnter: function(e){
-      if ( 13 != e.keyCode) return;
+      if ( 13 !== e.keyCode) {
+        return;
+      }
       e.preventDefault();
       document.getElementById("save_domainname").click();
       return this;
@@ -760,7 +762,7 @@
           if (domain) {
             _this.useDomain(domain);
           }
-        }, this)
+        }, this);
         this.model.domains.enablePolling();
       }
     },

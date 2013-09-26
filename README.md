@@ -27,6 +27,8 @@ Lift leverages the search index power of Amazon CloudSearch to improve your
 
 The master branch does not contain the built css and minfied js files that are needed to run the plugin, if using as a submodule, use a tagged release which will contain all built files, https://github.com/voceconnect/lift-search/tags.
 
+If you do use the master branch, the project is built using [Grunt](http://gruntjs.com/).
+
 For full documentation see 
 [getliftsearch.com/documentation/](http://getliftsearch.com/documentation/)
 

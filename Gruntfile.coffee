@@ -56,7 +56,6 @@ module.exports = (grunt) ->
         default: "staging"
       staging: [
         "jshint"
-        "imagemin"
         "uglify"
         "compass:development"
       ]
